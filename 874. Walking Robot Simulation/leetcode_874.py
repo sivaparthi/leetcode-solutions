@@ -5,8 +5,7 @@ class Solution:
         direction_index = 0  # Start facing north (0th index)
 
         # Convert obstacles to a set of tuples for O(1) lookup
-        obstacle_set = set(map(tuple, obstacles))
-        print(obstacle_set)
+        obstacle_set = {tuple(o) for o in obstacles}
 
         # Initialize robot's starting position
         x, y = 0, 0
